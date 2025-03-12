@@ -7,7 +7,7 @@ const cors = require("cors")
 
 connectDb();  // data base connection
 const app = express()
-app.use(cors())
+app.use(cors({ origin: process.env.CORS_ORIGIN }));
 app.use(express.json()) // middleware for parsing json data
 
 app.use('/api/v1/auth', require("./routers/userRouter.js"))
