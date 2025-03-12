@@ -9,7 +9,7 @@ function App() {
 
   return (
     <Router>
-      <Routes>
+      <Routes basename="/">
         <Route path="/" element={token ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
         <Route path="/dashboard" element={token ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
