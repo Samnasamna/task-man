@@ -2,7 +2,7 @@
 
 A full-stack task management application with **CRUD functionality** and **JWT-secured authentication**, built using **React (frontend)** and **Node.js/Express (backend)**.  
 
-## ** Features**  
+## **Features**  
 - User authentication with **JWT** (Login, Register, Logout)  
 - **Create, Read, Update, Delete (CRUD)** functionality for tasks  
 - **Secure API** with protected routes  
