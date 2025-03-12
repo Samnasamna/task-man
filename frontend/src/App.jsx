@@ -10,13 +10,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={token ? <Navigate to={"/dashboard"} /> : <Navigate to={"/login"} />} />
-        <Route path="/dashboard" exxact element={token ? <Home/> : <Navigate to={"/login"}/>}/>
-        <Route path="/login" exxact element={<Login/>}/>
-        <Route path="/signup" exxact element={<SignUp/>}/>
+        <Route path="/" element={token ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
+        <Route path="/dashboard" element={token ? <Home /> : <Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
 export default App
