@@ -5,7 +5,7 @@ import { validateEmail } from '../utils/helper'
 import axiosInstance from "../utils/axiosInstance.js"
 
 
-const Login = () => {
+const Login = ({setToken}) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
@@ -42,6 +42,7 @@ const Login = () => {
       //handle login success
       if(response.data && response.data.token){
         localStorage.setItem("token",response.data.token)
+        setToken(response.data.token);
         navigate('/dashboard')
       }
       
