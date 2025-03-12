@@ -95,13 +95,13 @@ const deleteTask = async (data)=>{
 useEffect(()=>{
   getUserInfo();
   getTasks();
-  return ()=>{};
 },[statusTask])
 
   return (
     <>
     <NavBar 
         userInfo = {userInfo} 
+        statusTask={statusTask}
         setStatusTask={setStatusTask}/>
         
     {allTasks.length > 0 ? <div>
